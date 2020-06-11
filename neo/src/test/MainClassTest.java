@@ -4,6 +4,8 @@ import neo.src.java.MainClass;
 import org.junit.Assert;
 import org.junit.Test;
 
+import static org.hamcrest.CoreMatchers.containsString;
+
 public class MainClassTest {
 
     MainClass Main = new MainClass();
@@ -20,5 +22,11 @@ public class MainClassTest {
 
         int b = Main.getClassNumber();
         Assert.assertTrue("The number " + b + " is less than 45",b > 45);
+    }
+
+    @Test
+    public void testGetClassString() {
+        String s = Main.getClassString();
+        Assert.assertTrue("This string does not contain substrings: hello or Hello", s.contains("hello") || s.contains("Hello"));
     }
 }
