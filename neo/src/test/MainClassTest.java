@@ -15,4 +15,10 @@ public class MainClassTest {
         Assert.assertTrue("Expected number: 14, but found: " + a,a == 14);
     }
 
+    @Test
+    public void testGetClassNumber(){
+
+        int b = Main.getClassNumber();
+        Assert.assertTrue("The number " + b + " is less than 45",b > 45);
+    }
 }
