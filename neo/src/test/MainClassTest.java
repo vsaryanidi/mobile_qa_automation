@@ -21,7 +21,7 @@ public class MainClassTest {
     public void testGetClassNumber(){
 
         int b = Main.getClassNumber();
-        Assert.assertTrue("The number " + b + " is less than 45",b > 45);
+        Assert.assertTrue("The number " + b + " is equals or less than 45",b > 45);
     }
 
     @Test
